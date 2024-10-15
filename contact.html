@@ -236,50 +236,23 @@
                     </div>
                     <!-- contact info end -->
 
-                    <!-- contact form -->
-                    <div class="container">
-                        <div class="mil-half-container mil-up">
-                            <div class="mil-text-box mil-g-m1 mil-p-160-160">
-                                <h2 class="mil-display3 mil-rubber mil-mb60 mil-m4 mil-up">let's <span class="mil-a1">talk</span></h2>
-                                <form action="process_form.php" method="post">
-                                    <div class="row mil-aic">
-                                        <div class="col-md-6 mil-mb30 mil-up">
-                                            <input type="text" name="name" placeholder="What's your name" required>
-                                        </div>
-                                        <div class="col-md-6 mil-mb30 mil-up">
-                                            <input type="email" name="email" placeholder="Your Email" required>
-                                        </div>
-                                        <div class="col-md-12 mil-mb30 mil-up">
-                                            <textarea name="message" placeholder="Tell us about your project" required></textarea>
-                                        </div>
-                                        <div class="col-md-6 mil-mb30">
-                                            <p class="mil-text-sm mil-up">*We promise not to disclose your personal information to third parties.</p>
-                                        </div>
-                                        <div class="col-md-6 mil-mb30 mil-768-mb0 mil-jce mil-768-jcc mil-up">
-                                            <button type="submit" class="mil-btn mil-a2 mil-c-gone">Send message</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="mil-image-box mil-c-gone">
-                                <div class="mil-image-frame">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7266.270145236968!2d54.50391197578439!3d24.411374592217484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sae!4v1728418343728!5m2!1sen!2sae" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    <div class="mil-overlay"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mil-aic mil-jcb mil-no-g">
-                            <div class="col-lg-6">
-                                <div class="mil-button-pad mil-a1 mil-jst" style="display: block"></div>
-                            </div>
-                            <div class="col-lg-6 mil-992-gone">
-                                <div class="mil-text-pad">
-                                    <p class="mil-text-sm mil-up">By clicking the submit button, you agree to the <br><a href="contact.html" class="mil-text-link mil-a2 mil-c-gone">rules for processing personal data</a>.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- contact form end -->
+                    
+
+                    <!-- Cal inline embed code begins -->
+                    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+                    <script type="text/javascript">
+                        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                        Cal("init", "30min", {origin:"https://cal.com"});
+
+                        Cal.ns["30min"]("inline", {
+                            elementOrSelector:"#my-cal-inline",
+                            config: {"layout":"month_view"},
+                            calLink: "wakasso/30min",
+                        });
+
+                        Cal.ns["30min"]("ui", {"styles":{"branding":{"brandColor":"#83b3d9"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                    </script>
+  <!-- Cal inline embed code ends -->
 
                     <!-- footer -->
                     <footer class="mil-footer mil-p-160-160">
